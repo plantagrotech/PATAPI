@@ -36,7 +36,10 @@ module.exports = (sequelize, Sequelize) => {
             defaultValue:false
         },
         lastlogintime: {
+            //type: Sequelize.DATE,
+            allowNull: false,
             type: Sequelize.DATE,
+            defaultValue: Sequelize.fn('now')
         },
         lockoutenabled: {
             type: Sequelize.BOOLEAN,
@@ -44,7 +47,10 @@ module.exports = (sequelize, Sequelize) => {
             defaultValue:false
         },
         lockoutend: {
+            //type: Sequelize.DATE,
+            allowNull: false,
             type: Sequelize.DATE,
+            defaultValue: Sequelize.fn('now')
         },
         passwordhash: {
             type: Sequelize.TEXT,
@@ -65,7 +71,10 @@ module.exports = (sequelize, Sequelize) => {
             defaultValue: Sequelize.fn('now')
         },
         lastloginfailedtime: {
+            //type: Sequelize.DATE,
+            allowNull: false,
             type: Sequelize.DATE,
+            defaultValue: Sequelize.fn('now')
         }
     });  
     return AuthUsers;

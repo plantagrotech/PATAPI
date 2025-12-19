@@ -18,9 +18,17 @@ exports.create = (req, res) => {
   const product = {
     name: req.body.name,
     slug: req.body.slug,
+    skuid:commonService.generateSKU(req.body.name),
+    shortdescription: req.body.shortdescription,
+    description: req.body.description,
     price: req.body.price,
-    qty: req.body.qty,
-    skuid:commonService.generateSKU(req.body.name,)
+    mrp: req.body.mrp,
+    discount: req.body.discount,
+    categoryid: req.body.categoryid,
+    organizationid: req.body.organizationid,
+    authorid: req.body.authorid,
+    additionaldata: req.body.additionaldata,
+    status: req.body.status  
   };
 
   // Save Product in the database

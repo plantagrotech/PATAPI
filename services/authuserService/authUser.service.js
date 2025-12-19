@@ -1,13 +1,13 @@
 const { DATE } = require("sequelize");
 const authUserDl = require("../../dataLayer/authUserDL/authUser.dl");
-const Authuser = authUserDl.authusers;
+const Authuser = authUserDl.authUsers;
 const Op = authUserDl.Sequelize.Op;
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 // Create and Save a new User
 exports.create = async (req, res) => {
-  const {email,firstname,password}= req?.body;
+  const {email,firstname,password, lastname, middlename, timezone, phonenumber, emailconfirmed, lockoutenabled, phonenumberconfirmed, accessfailedcount,}= req?.body;
   // Validate request
   if (!email || email.length == 0 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     res.status(400).send({
@@ -32,6 +32,14 @@ exports.create = async (req, res) => {
   const authuser = {
     email: email,
     firstname: firstname,
+    lastname: lastname,
+    middlename: middlename,
+    timezone: timezone,
+    phonenumber: phonenumber,
+    accessfailedcount: accessfailedcount,
+    phonenumberconfirmed: phonenumberconfirmed,
+    lockoutenabled: lockoutenabled,
+    emailconfirmed: emailconfirmed,
     passwordhash: await bcrypt.hash(password, 10)
   };
 
@@ -71,7 +79,7 @@ exports.loginUser= async(req,res)=>{
       });
     }); 
     if (response && bcrypt.compare(password, response.passwordhash)) {
-      const token = jwt.sign({ userId: response.userid }, process.env.JWT_SECRET, { expiresIn: '1h' });
+      const token = jwt.sign({ userId: response.userid }, process.env.JWT_SECRET ?? 'secret', { expiresIn: '1h' });
       res.status(200).json({ message: 'Logged in successfully', token: token });
     } else {
       res.status(401).json({ error: 'Invalid credentials' });
