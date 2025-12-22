@@ -2,7 +2,7 @@ const productSizesService = require("../../../services/productService/productSiz
 const express= require ('express');
 const router = express.Router();
 
-// Create a new Product Sizes
+// Create a new Product Sizes 
 router.post("/", productSizesService.create);
 
 // Retrieve all Product Sizes
