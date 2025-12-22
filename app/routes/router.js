@@ -1,7 +1,7 @@
 const authUserController = require("../controllers/userController/authuser.controller");
 const productController= require("../controllers/productController/product.controller");
 const productDetailsController= require("../controllers/productController/productDetails.controller");
-const productSizesController= require("../controllers/productController/productSizes.controller");
+const productSizesController= require("../controllers/productController/productsizes.controller");
 const productTagsController= require("../controllers/productController/productTags.controller");
 const cartController= require("../controllers/cartController/cart.controller");
 const cartDetailsController= require("../controllers/cartController/cartdetails.controller");
