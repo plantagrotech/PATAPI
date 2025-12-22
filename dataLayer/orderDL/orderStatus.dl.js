@@ -18,6 +18,6 @@ const orderStatusDb = {};
 orderStatusDb.Sequelize = Sequelize;
 orderStatusDb.sequelize = sequelize;
 
-orderStatusDb.orderStatus = require("../../models/orderModels/orderStatus.model.js")(sequelize, Sequelize);
+orderStatusDb.orderStatus = require("../../models/orderModels/orderstatus.model.js")(sequelize, Sequelize);
 
 module.exports = orderStatusDb;
