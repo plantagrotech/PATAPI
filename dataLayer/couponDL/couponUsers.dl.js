@@ -18,6 +18,6 @@ const couponUsersDb = {};
 couponUsersDb.Sequelize = Sequelize;
 couponUsersDb.sequelize = sequelize;
 
-couponUsersDb.couponUsers = require("../../models/couponModels/couponUsers.model.js")(sequelize, Sequelize);
+couponUsersDb.couponUsers = require("../../models/couponModels/couponusers.model.js")(sequelize, Sequelize);
 
 module.exports = couponUsersDb;
