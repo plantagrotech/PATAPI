@@ -1,4 +1,4 @@
-const cartDetailsService = require("../../../services/cartService/cartdetails.service");
+const cartDetailsService = require("../../../services/cartService/cartDetails.service");
 const express= require ('express');
 const router = express.Router();
 
