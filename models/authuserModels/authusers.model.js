@@ -77,6 +77,6 @@ module.exports = (sequelize, Sequelize) => {
             defaultValue: Sequelize.fn('now')
         }
     });  
-    return AuthUsers;
+    return AuthUsers; 
   };
   
