@@ -18,6 +18,6 @@ const invoiceDetailsDb = {};
 invoiceDetailsDb.Sequelize = Sequelize;
 invoiceDetailsDb.sequelize = sequelize;
 
-invoiceDetailsDb.invoiceDetails = require("../../models/invoiceModels/invoiceDetails.model.js")(sequelize, Sequelize);
+invoiceDetailsDb.invoiceDetails = require("../../models/invoiceModels/invoicedetails.model.js")(sequelize, Sequelize);
 
 module.exports = invoiceDetailsDb;
