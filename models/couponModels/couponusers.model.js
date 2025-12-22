@@ -21,5 +21,5 @@ module.exports = (sequelize, Sequelize) => {
       defaultValue: Sequelize.UUIDV4
     }
   });
-  return CouponUsers;
+  return CouponUsers; 
 };
