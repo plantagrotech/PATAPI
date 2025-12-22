@@ -18,6 +18,6 @@ const authUsersDb = {};
 authUsersDb.Sequelize = Sequelize;
 authUsersDb.sequelize = sequelize;
 
-authUsersDb.authUsers = require("../../models/authuserModels/authUsers.model.js")(sequelize, Sequelize);
+authUsersDb.authUsers = require("../../models/authuserModels/authusers.model.js")(sequelize, Sequelize);
 
 module.exports = authUsersDb;
