@@ -11,11 +11,12 @@ module.exports = {
   //   idle: 10000
   // }
 
- HOST: "db-postgresql-blr1-85141-do-user-30830133-0.i.db.ondigitalocean.com",
+ HOST: "165.22.217.238",
   USER: "doadmin",
   PASSWORD: "AVNS_xAsh6QWfFv-DnrS_3jn",
-  DB: "defaultdb",
+  DB: "postgresdefaultdb",
   dialect: "postgres",
+  port: 5432,
   pool: {
     max: 5,
     min: 0,
