@@ -11,10 +11,10 @@ module.exports = {
   //   idle: 10000
   // }
 
- HOST: "165.22.217.238",
-  USER: "doadmin",
-  PASSWORD: "AVNS_xAsh6QWfFv-DnrS_3jn",
-  DB: "postgresdefaultdb",
+ HOST: "142.93.214.146",
+  USER: "postgresdev",
+  PASSWORD: "s9JU+t6FJ/ZKp#L2",
+  DB: "PATDEVDB",
   dialect: "postgres",
   port: 5432,
   pool: {
